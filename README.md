@@ -15,32 +15,13 @@
 - **Responsive layout** — works on mobile and desktop
 - **Zero dependencies** — pure HTML/CSS/JS, runs straight from the file system
 
+## 📸 Screenshot
+
+![Calculator App Screenshot](./assets/screenshot.png)
+
 ## 🚀 Live Demo
 
 **https://arjundroid12.github.io/calculator-app/**
-
-## 📸 Screenshot
-
-```
-┌─────────────────────────────────────────────┐
-│  Calculator                          🌙      │
-│  ┌───────────────────────────────────────┐  │
-│  │                          12 × 4 + 3   │  │
-│  │                                51     │  │
-│  └───────────────────────────────────────┘  │
-│  ┌─────┬─────┬─────┬─────┐                  │
-│  │ AC  │  ⌫  │  %  │  ÷  │   ┌──────────┐  │
-│  ├─────┼─────┼─────┼─────┤   │ History  │  │
-│  │  7  │  8  │  9  │  ×  │   │ ──────── │  │
-│  ├─────┼─────┼─────┼─────┤   │ 12×4=48  │  │
-│  │  4  │  5  │  6  │  −  │   │ 5+5=10   │  │
-│  ├─────┼─────┼─────┼─────┤   │          │  │
-│  │  1  │  2  │  3  │  +  │   │          │  │
-│  ├─────┼─────┴─────┼─────┤   └──────────┘  │
-│  │  0       │  .   │  =  │                  │
-│  └──────────┴──────┴─────┘                  │
-└─────────────────────────────────────────────┘
-```
 
 ## 🛠️ Tech Stack
 
@@ -93,7 +74,8 @@ calculator-app/
 │       └── ci.yml
 ├── assets/
 │   ├── app.js          # Calculator logic, history, keyboard, theme
-│   └── styles.css      # Theme tokens, layout, components
+│   ├── styles.css      # Theme tokens, layout, components
+│   └── screenshot.png  # README screenshot
 ├── index.html          # App shell
 ├── LICENSE
 ├── README.md
