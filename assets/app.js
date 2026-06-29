@@ -96,11 +96,12 @@
 
   const evaluateTokens = (tokens) => {
     if (tokens.length === 0) return null;
+    let i;
     // First pass: * and /
     let pass = tokens;
     for (const op of ["*", "/"]) {
       const next = [];
-      let i = 0;
+      i = 0;
       while (i < pass.length) {
         const t = pass[i];
         if (t.type === "operator" && t.value === op) {
