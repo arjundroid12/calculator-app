@@ -21,7 +21,10 @@
 
 ## 🚀 Live Demo
 
-**https://arjundroid12.github.io/calculator-app/**
+| Host | URL | Notes |
+|------|-----|-------|
+| 🥇 Surge.sh | https://arjun-calculator.surge.sh | Bangalore edge — best for India |
+| 🥈 GitHub Pages | https://arjundroid12.github.io/calculator-app/ | Primary — may be blocked by some Indian ISPs |
 
 ## 🛠️ Tech Stack
 
