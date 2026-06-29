@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A clean, modern calculator with keyboard support, history panel, and dark mode." />
+  <title>Calculator · Vanilla JS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/styles.css" />
+</head>
+<body>
+  <main class="app" aria-label="Calculator application">
+    <header class="app__header">
+      <h1 class="app__title">Calculator</h1>
+      <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle theme">
+        <span class="theme-toggle__icon">🌙</span>
+      </button>
+    </header>
+
+    <section class="calculator" aria-label="Calculator">
+      <div class="calculator__display">
+        <span id="expression" class="calculator__expression" aria-live="polite"></span>
+        <span id="result" class="calculator__result" aria-live="polite">0</span>
+      </div>
+
+      <div class="calculator__keys" role="group" aria-label="Calculator keys">
+        <button class="key key--action" data-action="clear">AC</button>
+        <button class="key key--action" data-action="delete" aria-label="Delete last character">⌫</button>
+        <button class="key key--action" data-action="percent">%</button>
+        <button class="key key--operator" data-operator="/">÷</button>
+
+        <button class="key" data-digit="7">7</button>
+        <button class="key" data-digit="8">8</button>
+        <button class="key" data-digit="9">9</button>
+        <button class="key key--operator" data-operator="*">×</button>
+
+        <button class="key" data-digit="4">4</button>
+        <button class="key" data-digit="5">5</button>
+        <button class="key" data-digit="6">6</button>
+        <button class="key key--operator" data-operator="-">−</button>
+
+        <button class="key" data-digit="1">1</button>
+        <button class="key" data-digit="2">2</button>
+        <button class="key" data-digit="3">3</button>
+        <button class="key key--operator" data-operator="+">+</button>
+
+        <button class="key key--wide" data-digit="0">0</button>
+        <button class="key" data-digit=".">.</button>
+        <button class="key key--equals" data-action="equals">=</button>
+      </div>
+    </section>
+
+    <aside class="history" aria-label="Calculation history">
+      <div class="history__header">
+        <h2 class="history__title">History</h2>
+        <button id="clearHistory" class="history__clear" type="button">Clear</button>
+      </div>
+      <ul id="historyList" class="history__list" aria-live="polite"></ul>
+      <p id="historyEmpty" class="history__empty">No calculations yet. Press <kbd>=</kbd> to see results here.</p>
+    </aside>
+
+    <footer class="app__footer">
+      <p>Use your keyboard: digits, <kbd>+</kbd> <kbd>-</kbd> <kbd>*</kbd> <kbd>/</kbd> <kbd>Enter</kbd> <kbd>Backspace</kbd> <kbd>Esc</kbd></p>
+    </footer>
+  </main>
+
+  <script src="./assets/app.js"></script>
+</body>
+</html>
