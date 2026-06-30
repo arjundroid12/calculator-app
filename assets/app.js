@@ -184,9 +184,15 @@
   const inputOperator = (op) => {
     state.justEvaluated = false;
     if (state.expression === "" && op !== "-") return;
-    if (OPERATORS.has(state.expression.slice(-1))) {
-      // Replace last operator
-      state.expression = state.expression.slice(0, -1) + op;
+    const lastChar = state.expression.slice(-1);
+    if (OPERATORS.has(lastChar)) {
+      // Allow unary minus after another operator (e.g., 5*-3 means 5 * -3)
+      // Otherwise replace the last operator with the new one
+      if (op === "-" && lastChar !== "-") {
+        state.expression += op;
+      } else {
+        state.expression = state.expression.slice(0, -1) + op;
+      }
     } else {
       state.expression += op;
     }
